@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" class="u-responsive-xl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="keywords" content="managed web hosting, web development, web design, ecommerce, Domain, virtual servers, vps, website hosting, publishing, cornwall, london, england, uk, united kingdom">
+    <meta name="description" content="We provide managed web hosting and web development. If you need a dedicated server or vps, we can help you with this.">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>CyberWEB Internet Solutions - Web Hosting and Development</title>
+    <link rel="stylesheet" href="static/CyberWEB Internet Solutions - Web Hosting and Development_files/main.css" media="screen">
+	<link rel="stylesheet" href="static/CyberWEB Internet Solutions - Web Hosting and Development_files/home.css" media="screen">
+    <script class="u-script" src="static/CyberWEB Internet Solutions - Web Hosting and Development_files/jquery.js.download" defer=""></script>
+    <script class="u-script" src="static/CyberWEB Internet Solutions - Web Hosting and Development_files/main.js.download" defer=""></script>
+    <link id="u-theme-google-font" rel="stylesheet" href="static/CyberWEB Internet Solutions - Web Hosting and Development_files/css">
+    <link id="u-page-google-font" rel="stylesheet" href="static/CyberWEB Internet Solutions - Web Hosting and Development_files/css(1)">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Handle form submission
+            $('#affineForm').on('submit', function(event) {
+                event.preventDefault();
+
+                // Get form data
+                var text = $('#text').val();
+                var a = $('#a').val();
+                var b = $('#b').val();
+                var mode = $('#mode').val();
+
+                // Send data to Flask app for encryption/decryption
+                $.ajax({
+                    url: '/affine',
+                    type: 'POST',
+                    data: {text: text, a: a, b: b, mode: mode},
+                    success: function(response) {
+                        $('#result').text(response.result);
+                    },
+                    error: function(response) {
+                        $('#result').text(response.error);
+                    }
+                });
+            });
+        });
+    </script>
+    <script type="application/ld+json">{
+
+
+}</script>
+    <meta name="theme-color" content="#29b7dd">
+
+  </head>
+  <body data-home-page="index" data-home-page-title="Home" class="u-body u-xl-mode">
+  <header class="u-clearfix u-header u-palette-2-base u-header" id="sec-2485"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="#" class="u-image u-logo u-image-1">
+        </a>
+        <nav class="u-dropdown-icon u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="MD" data-position="main_menu">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-active-border-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-white" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect></g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container" wfd-invisible="true">
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-3-base active"style="padding: 6px 0px;" href="{{ url_for('home') }}" >Home</a>
+			</li>
+      <!-- <li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-3-base" href="#about" style="padding: 6px 0px;">About us</a>
+			</li> -->
+      <li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-3-base" style="padding: 6px 0px;">Tools</a>
+                <div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+                  <li class="u-nav-item"><a class="u-button-style u-nav-link u-palette-3-base" href="{{ url_for('caesarCipher') }}">Caesar Cipher </a></li>
+                    <li class="u-nav-item"><a class="u-button-style u-nav-link u-palette-3-base" href="{{ url_for('affineCipher') }}">Affine Cipher </a></li>
+                    <li class="u-nav-item"><a class="u-button-style u-nav-link u-palette-3-base" href="{{ url_for('atbash_Cipher') }}">Atbash Cipher </a></li>
+                 </ul>
+			</div>
+			</li>
+      <li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-3-base" href="#contact" style="padding: 6px 0px;">Contact us</a>
+			</li>
+    </ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3"><li class="u-nav-item"><a class="u-button-style u-nav-link active" href="{{ url_for('home') }}">Home</a>
+				</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#about">About us</a>
+				</li>
+				</li><li class="u-nav-item"><a class="u-button-style u-nav-link">Tools</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{{ url_for('caesarCipher') }}">Caesar Cipher </a></li>
+                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{{ url_for('affineCipher') }}">Affine Cipher</a></li>
+                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{{ url_for('atbash_Cipher') }}">Atbash Cipher</a></li>
+                </ul>
+				</div>
+				</li>
+				</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#contact">Contact us</a>
+				</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70" wfd-invisible="true"></div>
+          </div>
+        <style class="offcanvas-style">            .u-offcanvas .u-sidenav { flex-basis: 250px !important; }            .u-offcanvas:not(.u-menu-open-right) .u-sidenav { margin-left: -250px; }            .u-offcanvas.u-menu-open-right .u-sidenav { margin-right: -250px; }            @keyframes menu-shift-left    { from { left: 0;        } to { left: 250px;  } }            @keyframes menu-unshift-left  { from { left: 250px;  } to { left: 0;        } }            @keyframes menu-shift-right   { from { right: 0;       } to { right: 250px; } }            @keyframes menu-unshift-right { from { right: 250px; } to { right: 0;       } }            </style></nav>
+      </div></header>
+<div class="page-header-area bg-img" id="top">
+    <!-- <img src="static/CyberWEB Internet Solutions - Web Hosting and Development_files/banner.jpeg" height="500px" width="100%"> -->
+
+</div>
+
+    <h1  align="center" style="color:#3b065e">Affine Cipher</h1>
+        <div align="center" style="border-color: #3b065e;border-style: dashed;border-width:medium; width: 40%; padding: 20px; margin:5% 30% 5% 30% ; ">
+
+    <form id="affineForm" ><br>
+        <label for="text">Text:</label>
+        <input type="text" id="text" name="text"><br><br>
+        <label for="a">Value for 'a' (must be coprime with 26):</label>
+        <input type="number" id="a" name="a" min="1" max="25" step="2" required><br><br>
+        <label for="b">Value for 'b' (must be between 0 and 25):</label>
+        <input type="number" id="b" name="b" min="0" max="25" required><br><br>
+        <label for="mode">Mode:</label>
+        <select id="mode" name="mode" required>
+            <option value="encrypt">Encrypt</option>
+            <option value="decrypt">Decrypt</option>
+        </select><br><br>
+
+  <label for="lang">Select the language:</label>
+    <select id="lang" name="lang">
+        <option value="en">English</option>
+        <option value="tr">Turkish</option>
+    </select><br><br>
+
+        <br>
+        <input type="submit" value="Submit" style="  background-color: #3b065e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;">
+    </form>
+    <h2>Result:</h2>
+    <p id="result"></p>
+        </div>
+
+  <div style="width: 100%; height: 5%; color: aliceblue; ">aslikoc</div>
+</body>
+</html>
